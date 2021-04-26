@@ -24,6 +24,30 @@ Tổn quan đến chi tiết*/
 #header {
   height: 46px;
   background-color: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#header .search-btn {
+  float: right;
+  padding: 0 21px;
+}
+
+#header .search-btn:hover {
+  background-color: #f44336;
+  cursor: pointer;
+}
+
+#header .search-icon {
+  color: #fff;
+  font-size: 28px;
+  line-height: 46px;
+}
+
+#nav {
+  display: inline-block;
 }
 #nav,
 .subnav {
@@ -74,8 +98,12 @@ Tổn quan đến chi tiết*/
   line-height: 38px;
 }
 
+#nav .nav-arrow-down {
+  font-size: 14px;
+}
+
 #slider {
-  min-height: 500px;
+  margin-top: 46px;
 }
 
 #content {
