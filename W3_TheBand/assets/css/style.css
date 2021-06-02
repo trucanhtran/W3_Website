@@ -26,6 +26,57 @@ Tổn quan đến chi tiết*/
   color: #fff !important;
 }
 
+.text-center {
+  text-align: center !important;
+}
+
+.row {
+  margin-left: -8px;
+  margin-right: -8px;
+}
+.row::after {
+  content: "";
+  display: block; /*ghi nho*/
+  clear: both;
+}
+.col {
+  float: left;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.col-full {
+  width: 100%;
+}
+.col-half {
+  width: 50%;
+}
+.col-third {
+  width: 33.3333%;
+}
+
+.mt-8 {
+  margin-top: 8px !important;
+}
+.mt-16 {
+  margin-top: 16px !important;
+}
+.pull-right {
+  float: right;
+}
+.btn {
+  color: #fff;
+  background-color: #000;
+  text-decoration: none;
+  padding: 11px 16px;
+  display: inline-block;
+  margin-top: 15px;
+  border: none;
+  cursor: pointer;
+}
+.btn:hover {
+  color: #000;
+  background-color: #ccc;
+}
 #main {
 }
 
@@ -139,7 +190,7 @@ Tổn quan đến chi tiết*/
 }
 #content .content-section {
   width: 800px;
-  padding: 64px 0;
+  padding: 64px 0 112px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -164,13 +215,6 @@ Tổn quan đến chi tiết*/
 }
 #content .members-list {
   margin-top: 48px;
-}
-
-#content .member-item {
-  float: left;
-  /* width: calc(100 / 3); */
-  width: 33.333333333%;
-  text-align: center;
 }
 
 #content .member-name {
@@ -216,12 +260,7 @@ Tổn quan đến chi tiết*/
 }
 /*Places*/
 .places-list {
-  margin: 32px -8px 48px;
-}
-.place-item {
-  float: left;
-  width: 33.333333%;
-  padding: 0 8px;
+  margin-top: 32px;
 }
 .place-img {
   width: 100%;
@@ -247,17 +286,57 @@ Tổn quan đến chi tiết*/
   margin-top: 15px;
   line-height: 1.4;
 }
-.place-buy-btn {
-  color: #fff;
-  background-color: #000;
-  text-decoration: none;
-  padding: 11px 16px;
+/*Contact form*/
+.contact-content {
+  margin-top: 48px;
+}
+.contact-info {
+  font-size: 18px;
+  line-height: 1.5;
+}
+.contact-info i[class*="ti-"] {
+  width: 30px;
   display: inline-block;
-  margin-top: 15px;
 }
-.place-buy-btn:hover {
-  color: #000;
-  background-color: #ccc;
+.contact-form {
+  font-size: 15px;
 }
+.contact-form .form-controll {
+  padding: 10px;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+.contact-form .form-submit-btn {
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #000;
+  padding: 10px 16px;
+  float: right;
+}
+/* Map section*/
+.map-section img {
+  width: 100%;
+}
+/*Footer section*/
 #footer {
+  padding: 64px 16px;
+  text-align: center;
+}
+#footer .social-lists {
+  font-size: 24pxs;
+}
+#footer .social-lists a {
+  color: rgba(0, 0, 0, 0.6);
+  text-decoration: none;
+}
+#footer .copyright a:hover,
+#footer .social-lists a:hover {
+  color: rgba(0, 0, 0, 0.4);
+}
+#footer .copyright {
+  margin-top: 15px;
+  color: rgba(0, 0, 0, 0.6);
+}
+#footer .copyright a {
+  color: rgba(0, 0, 0, 0.4);
 }
