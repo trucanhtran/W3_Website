@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
     <meta charset="UTF-8" />
     <link
       rel="stylesheet"
@@ -9,35 +10,40 @@
     />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>The Band</title>
   </head>
   <body>
     <div id="main">
       <div id="header">
         <!--Begin:nav-->
         <ul id="nav">
-          <li><a href="">Home</a></li>
-          <li><a href="">Band</a></li>
-          <li><a href="">Tour</a></li>
-          <li><a href="">Contact</a></li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#band">Band</a></li>
+          <li><a href="#tour">Tour</a></li>
+          <li><a href="#contact">Contact</a></li>
           <li>
-            <a href="">
+            <a href="#">
               More
               <i class="nav-arrow-down ti-angle-down"></i>
             </a>
             <ul class="subnav">
-              <li><a href="">Merchandise</a></li>
-              <li><a href="">Extras</a></li>
-              <li><a href="">Media</a></li>
+              <li><a href="#">Merchandise</a></li>
+              <li><a href="#">Extras</a></li>
+              <li><a href="#">Media</a></li>
             </ul>
           </li>
         </ul>
         <!--End:nav-->
-        <!--Begin:Search-->
+
+        <!--Mobile Menu Button-->
+        <div id="mobile-menu" class="mobile-menu-btn">
+          <i class="menu-icon ti-menu"></i>
+        </div>
+
+        <!--Search Button-->
         <div class="search-btn">
           <i class="search-icon ti-search"></i>
         </div>
-        <!--End:Seach-->
       </div>
       <div id="slider">
         <div class="text-content">
@@ -50,7 +56,7 @@
 
       <div id="content">
         <!--About section-->
-        <div class="content-section">
+        <div id="band" class="content-section">
           <h2 class="section-heading">THE BAND</h2>
           <p class="section-sub-heading">We love music</p>
           <p class="about-text">
@@ -94,7 +100,7 @@
           </div>
         </div>
         <!-- Tour section-->
-        <div class="tour-section">
+        <div id="tour" class="tour-section">
           <div class="content-section">
             <h2 class="section-heading text-white">TOUR DATES</h2>
             <p class="section-sub-heading text-white">
@@ -158,7 +164,7 @@
         </div>
 
         <!--Begin: Contact section-->
-        <div class="content-section">
+        <div id="contact" class="content-section">
           <h2 class="section-heading">CONTACT</h2>
           <p class="section-sub-heading">Fan? Drop a note!</p>
           <div class="row contact-content contact-info">
@@ -232,5 +238,30 @@
         <p class="copyright">Powered by w3.css</p>
       </div>
     </div>
+
+    <script>
+      var header = document.getElementById("header");
+      // mobile menu
+      var mobileMenu = document.getElementById("mobile-menu");
+      var headerHeight = header.clientHeight;
+      //đóng mở mobile menu
+      mobileMenu.onclick = function () {
+        var isClosed = header.clientHeight === headerHeight;
+        if (isClosed) {
+          header.style.height = "auto";
+        } else {
+          header.style.height = null;
+        }
+      };
+
+      // tự động đóng khi chọn menu
+      var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+      for (var i = 0; i < menuItems.length; i++) {
+        var menuItem = menuItems[i];
+        menuItem.onclick = function () {
+          header.style.height = null;
+        };
+      }
+    </script>
   </body>
 </html>
