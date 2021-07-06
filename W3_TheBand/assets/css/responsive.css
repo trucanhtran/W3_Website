@@ -8,6 +8,26 @@
 
 /* Mobile */
 @media (max-width: 740px) {
+  .s-full-width,
+  .s-col-full {
+    width: 100% !important;
+  }
+
+  .s-mt-8 {
+    margin-top: 16px !important;
+  }
+
+  #header {
+    overflow: hidden;
+  }
+
+  #header .mobile-menu-btn {
+    display: block;
+  }
+
+  #header .search-btn {
+    display: none;
+  }
   #nav {
     display: block;
   }
@@ -20,11 +40,21 @@
     display: inline-block;
   }
 
-  #header .mobile-menu-btn {
-    display: block;
+  #nav .subnav {
+    position: initial;
+    background-color: #333;
   }
 
-  #header .search-btn {
-    display: none;
+  #nav .subnav a {
+    color: #fff;
+    padding: 5px 41px;
+  }
+
+  #content .member-img {
+    width: 60%;
+  }
+
+  .contact-form {
+    margin-top: 16px;
   }
 }
