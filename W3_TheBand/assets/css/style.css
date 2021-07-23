@@ -79,12 +79,15 @@ Tổn quan đến chi tiết*/
   border: none;
   cursor: pointer;
   text-align: center;
+  appearance: none;
+  -webkit-appearance: none;
 }
 .btn:hover {
   color: #000;
   background-color: #ccc;
 }
 #main {
+  width: 100%;
 }
 
 #header {
@@ -323,6 +326,13 @@ Tổn quan đến chi tiết*/
 .contact-info i[class*="ti-"] {
   width: 30px;
   display: inline-block;
+}
+.contact-info a {
+  color: #101aef;
+  opacity: 0.8;
+}
+.contact-info a:hover {
+  opacity: 1;
 }
 .contact-form {
   font-size: 15px;
